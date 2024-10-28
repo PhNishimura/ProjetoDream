@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css'; 
-import logo from'/Users/pedro.bachaalani/3D Objects/projeto_dream/src/img/logo.png'
+import logo from'../img/logo.png'
 
 const Header = () => {
   return (
