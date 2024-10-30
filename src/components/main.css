@@ -1,6 +1,13 @@
 .banner-image{
     width: 100%;
-    height: 450;
+    height: 450px;
+}
+
+.container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .box-promo {
@@ -10,5 +17,13 @@
     width: 850px;
     height: 350px;
     background-color: #061B33;
-    margin: 0 auto; /* Para centralizar horizontalmente na página */
+    margin: 0 auto;
+}
+
+
+.box-promo h1{
+    color: white;
+}
+.carousel-item {
+    transition: none; 
 }
