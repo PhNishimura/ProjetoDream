@@ -1,13 +1,11 @@
-
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import './main.css';
 import banner from "../img/banner.png";
 import test from "../img/jogo1.png";
-import maco from "../img/mamaco.jpeg"
-import homi from "../img/spider.jpg"
-
+import maco from "../img/mamaco.jpeg";
+import homi from "../img/spider.jpg";
 
 const gamesName = [
   {
@@ -28,20 +26,17 @@ const gamesName = [
     image: homi,
     alt: "Terceiro Slide"
   },
-
-
-]
+];
 
 const ExampleCarouselImage = ({ src, alt }) => (
-  <img className="d-block w-100" src={src} alt={alt} style={{ height: '250px',  objectFit: 'cover' }}/>
+  <img className="d-block w-100" src={src} alt={alt} style={{ height: '250px', objectFit: 'cover' }} />
 );
 
 const Main = () => {
   const [currentGame, setCurrentGame] = useState(gamesName[0]);
 
-
   const handleSelect = (selectedIndex) => {
-    setCurrentGame(gamesName[selectedIndex]); 
+    setCurrentGame(gamesName[selectedIndex]);
   };
 
   return (
@@ -50,13 +45,14 @@ const Main = () => {
       <div className='container'>
         <h1 className='cB'>PROMOÇÕES</h1>
         <div className='box-promo'>
-          <Carousel activeIndex={gamesName.indexOf(currentGame)} onSelect={handleSelect}>
+          <Carousel fade activeIndex={gamesName.indexOf(currentGame)} onSelect={handleSelect}>
             {gamesName.map((game, index) => (
               <Carousel.Item key={index}>
                 <ExampleCarouselImage src={game.image} alt={game.alt} />
               </Carousel.Item>
             ))}
           </Carousel>
+          
           <div className='detais'>
             <h1>{currentGame.name}</h1>
             <div data-tooltip={`Valor: ${currentGame.price}`} className="button">

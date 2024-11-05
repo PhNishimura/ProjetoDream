@@ -54,10 +54,15 @@ main {
   margin-bottom: 20px;
 }
 
-.carousel-item {
-  transition: none;
+.carousel-item img {
+  height: 250px; /* Tamanho fixo para todas as imagens */
+  object-fit: cover; /* Assegura que a imagem preencha a área sem distorção */
+  width: 100%; /* Garante que a imagem ocupe toda a largura do carrossel */
 }
 
+.carousel-inner {
+  height: 250px; /* Ajusta a altura do contêiner do carrossel */
+}
 
 @media (max-width: 768px) {
   .container {
